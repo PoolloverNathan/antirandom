@@ -2,6 +2,7 @@
   <h2>antirandom</h2>
   <p>A tool for fixing <code>Math.random()</code> to return a specific value.</p>
   <p>Install this bookmarklet: <a id="b">antirandom</a></p>
+  <p>Test it: <button onclick="r.innerText = String(Math.round(Math.random() * 1000) / 1000).padEnd(5, 0)">Randomize</button> <span style="font-family: monospace; white-space: pre">     </span></p>
 </center>
 <script>
   fetch("bookmark.js").then(res => res.text()).then(txt => { b.href = "javascript:" + txt })
