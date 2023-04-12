@@ -34,7 +34,7 @@ jobs:
       - name: Check syntax
         run: "node -c main.js"
       - name: Check compiler syntax
-        run: "node -c compiler.js"
+        run: "node -c compile.js"
       - name: Compile
         run: "node compile.js < main.js > bookmark.js"
       - name: Check result syntax
