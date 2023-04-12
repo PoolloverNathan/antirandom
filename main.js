@@ -37,3 +37,4 @@ ctx.activate = () => {
   el.style.bottom = active ? 0 : "-1cm"
   el.style.opacity = Number(active)
 }
+document.body.appendChild(el)
