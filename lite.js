@@ -33,8 +33,8 @@ document.body.appendChild(el)
 const origRand = window.antirandomOrigRand || (window.antirandomOrigRand = Math.random)
 const shimRand = () => v
 
-const a = el.getElementById("arand-active")
-const v = el.getElementById("arand-value")
+const a = el.querySelector("#arand-active")
+const v = el.querySelector("#arand-value")
 a.onchange = () => {
   v.disabled = !a.checked
   Math.random = a.checked ? shimRand : origRand
