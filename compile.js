@@ -1,2 +1,5 @@
 const { readFileSync } = require("fs")
-process.stdout.write('new Function("window", atob("' + readFileSync(0).toString('base64') + '"))(window)')
+const orig = readFileSync(0).toString('base64')
+const sc = btoa(readFileSync("inner-script.tpl.js").replace("/* code */", JSON.stringify(orig)))
+const sc2 = readFileSync("outer-script.tpl.js").replace("/* code */", JSON.stringify(sc)))
+process.stdout.write(sc2)
