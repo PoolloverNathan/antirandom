@@ -33,12 +33,18 @@ jobs:
         uses: actions/checkout@v3
       - name: Check syntax
         run: "node -c main.js"
+      - name: Check lite syntax
+        run: "node -c lite.js"
       - name: Check compiler syntax
         run: "node -c compile.js"
       - name: Compile
         run: "node compile.js < main.js > bookmark.js"
+      - name: Compile lite
+        run: "node compile.js < lite.js > lite-c.js"
       - name: Check result syntax
         run: "node -c bookmark.js"
+      - name: Check lite result syntax
+        run: "node -c lite-c.js"
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
