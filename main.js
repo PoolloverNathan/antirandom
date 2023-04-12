@@ -30,7 +30,7 @@ Object.assign(el.style, {
   transition: "bottom 0.25s, opacity 0.25s",
   background: "gray",
   borderTopLeftRadius: "8px"
-}
+})
 let active = true
 ctx.activate = () => {
   active = !active
