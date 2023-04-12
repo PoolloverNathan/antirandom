@@ -4,7 +4,7 @@ if (document.overlay_antirandom_main) {
 }
 
 const el = document.createElement("div")
-el.innerHtml = `
+el.innerHTML = `
 <div style="height: 1cm;">
   <label><input type="checkbox" id="arand-active"> Active</label>
 </div>
