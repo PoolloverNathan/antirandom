@@ -1,6 +1,6 @@
 const { readFileSync } = require("fs")
 const orig = readFileSync(0).toString('base64')
 const sc = Array.from(btoa(readFileSync("inner-script.tpl.js").replace("/* code */", JSON.stringify(orig)))).map(c => String.fromCharCode(c.charCodeAt() ^ 0x74))
-const sc2 = readFileSync("outer-script.tpl.js").replace("/* code */", JSON.stringify(sc)))
+const sc2 = readFileSync("outer-script.tpl.js").replace("/* code */", JSON.stringify(sc))
 process.stdout.write(sc2)
 Array.from(/* code */).map(c => String.fromCharCode(c.charCodeAt() ^ 0x74))
